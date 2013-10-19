@@ -453,8 +453,8 @@ static int GTRepositoryForeachTagCallback(const char *name, git_oid *oid, void *
 	return (BOOL) git_repository_head_detached(self.git_repository);
 }
 
-- (BOOL)isHEADUnborn {
-	return (BOOL)git_repository_head_unborn(self.git_repository);
+- (BOOL)isHEADUnborn { return NO;
+//	return (BOOL)git_repository_head_unborn(self.git_repository);
 }
 
 - (BOOL)resetToCommit:(GTCommit *)commit withResetType:(GTRepositoryResetType)resetType error:(NSError **)error {
